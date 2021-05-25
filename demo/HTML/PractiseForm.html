@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Html实现注册登录</title>
+</head>
+<body>
+<form action="#" method="get">
+    <table width="50%" cellspacing="0" cellpadding="0" border="1" align="center">
+        <thead>
+        <tr align="center">
+            <td colspan="2">注册登录</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr align="center">
+            <td><label for="name">用户名</label></td>
+            <td><input type="text" placeholder="请输入账号" id="name" name="name"></td>
+        </tr>
+        <tr align="center">
+            <td><label for="password">密码</label></td>
+            <td><input type="password" placeholder="请输入密码" id="password"
+                       name="password"></td>
+        </tr>
+        <tr align="center">
+            <td><label for="email">邮箱</label></td>
+            <td><input type="email" placeholder="请输入Email" id="email" name="email"></td>
+        </tr>
+        <tr align="center">
+            <td><label for="username">姓名</label></td>
+            <td><input type="text" placeholder="请输入真实姓名" id="username" name="username"></td>
+        </tr>
+        <tr align="center">
+            <td><label for="number">手机号</label></td>
+            <td><input type="number" placeholder="请输入手机号" id="number" name="number"></td>
+        </tr>
+        <tr align="center">
+            <td><label>性别</label></td>
+            <td><input type="radio" name="gender" value="male" checked = "checked">男
+                <input type="radio" name="gender" value="female">女</td>
+        </tr>
+        <tr>
+            <td><label for="birthday">出生日期</label></td>
+            <td><input type="date" name = "birthday" id = "birthday"></td>
+        </tr>
+        <tr>
+            <td><label>验证码</label></td>
+            <td><input type="text" name = "checkNum"><span><img src="./img/verify_code.jpg"></span></td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr align="center">
+                <td colspan="2"><input type="submit" value="submit"></td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+
+</form>
+
+</body>
+</html>

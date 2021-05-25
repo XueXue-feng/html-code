@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--表单项标签 type的取值 -->
+<!--placeholder页面显示提示信息-->
+<form action="#" method="get">
+    <label for="username">账号</label> <input type="text" name="username" placeholder="请输入账号" id="username"><br>
+    密码 <input type="password" name="password"><br>
+    性别 <input type="radio" name="gender" value="male"> 男
+    <!--checked = "checked" 表示默认被选择-->
+    <input type="radio" name="gender" value="female" checked="checked"> 女
+    <br>
+    爱好 <input type="checkbox" name="hobby" value="shopping" checked="checked"> 逛街
+    <input type="checkbox" name="hobby" value="shopping2"> 买买买
+    <input type="checkbox" name="hobby" value="song"> 唱歌
+    <input type="checkbox" name="hobby" value="swimming"> 游泳
+    <br>
+    文件上传 <input type="file" name="name"> <br>
+    隐藏域 <input type="hidden" name="sum" value="aaa"> <br>
+    拾色器 <input type="color" name="color"> <br>
+    日期 <input type="date" name="date"> <br>
+    年龄 <input type="number" name="age"> <br>
+    邮箱 <input type="email" name="email"> <br>
+    省份 <select name = "province">
+            <option value="">--请选择--</option>
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+        </select>
+    <br>
+    自我描述 <textarea name="selfDes" cols="10" rows="5"></textarea>
+    <input type="submit" value="提交">
+    <input type="button" value="我是按钮">
+    <input type="image" src="./img/regbtn.jpg"><!--我可以提交表单-->
+    <br>
+</form>
+</body>
+</html>

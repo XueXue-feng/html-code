@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array对象</title>
+</head>
+<body>
+<script>
+    /*array对象
+    * 1.创建；1.var arr= new Array(元素列表);  2.var arr = new Array(元素长度); 3.var arr = [元素列表];
+    * 2.属性 lengths 数组的长度
+    * 3.特点：1.在JS中，数组的类型是可变的 2.在JS中 数组的长度是可变的
+    * 4.方法：
+    * join() 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+    * push() 向数组的末尾添加一个或更多元素，并返回新的长度。
+    *
+    * */
+
+    /*创建方式1*/
+    var arr1 = new Array(1, 2, 3, 4);
+    var arr2 = new Array(5);//数组长度为5只有一个数字类型的则表示数字
+    var arr3 = [1, 2, 3, 4, 5, 6];
+    var arr4 = new Array();//表示创建一个空的数组
+    document.write(arr1 + "<br>");
+    document.write(arr2 + "<br>");
+    document.write(arr3 + "<br>");
+    document.write("<hr>");
+    /*特点*/
+    var arr5 = new Array(1,"2",true,null);
+    document.write(arr5[0] + "<br>");
+    document.write(arr5[1] + "<br>");
+    document.write(arr5[2] + "<br>");
+    document.write(arr5[3] + "<br>")
+    document.write(arr5[4] + "<br>");//undefined
+    arr5[10] = "hehe";
+    document.write(arr5[10] + "<br>");
+    document.write("<hr>");
+    document.write(arr5.length);
+    document.write("<hr>");
+    /*join方法*/
+    var arr6 = ['a','b','c','d'];
+    document.write(arr6.join("-"));//如果什么都不写则是,
+    /*push() 向数组的末尾添加一个或更多元素，并返回新的长度。*/
+    arr6.push('f');
+    document.write(arr6);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+    <!--form用于定义表单的，可以定义一个范围，这个范围表示采集用户数据的范围
+    属性：action指定提交数据的URL method:指定提交的方式
+    get	默认。将表单数据（form-data）以名称/值对的形式附加到 URL 中：URL?name=value&name=value。
+    post：以 HTTP post 事务的形式发送表单数据（form-data）。
+    表单中的数据(表单项)要想被提交，必须指定其name属性
+    get:1.表单的参数会在地址栏中显示，会封装在请求行中 2.请求参数URL的长度有限 3.不安全
+    post:1.表单的参数不会在地址栏中显示，会封装在请求体中 2.请求参数URL的长度无限 3.较为安全
+    -->
+    <form action="#" method="post"><!--action一般写服务器的资源的地址-->
+        用户名：<input name = "username">
+        密码：<input name = "password"><br>
+        <input type="submit" value="登录">
+    </form>
+</body>
+</html>

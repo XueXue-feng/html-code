@@ -1,0 +1,78 @@
+HTML概念：Hyper Text MarKUp Language 超文本标记语言
+超文本：超文本使用超链接的方法将不同空间的文字信息组织在一起的网状文本
+标记语言：由标签构成的语言<标签名称>
+如：HTML,Xmld都是标记语言，不是程序语言，没有任何逻辑
+是最基础的网页开发语言
+HTML的快速入门
+1.语法：1.网页的后缀为html,或者是htm两者没有任何区别
+2.标签分为：1.围堵标签：由开始标签和结束标签如<html></html>
+	2.自闭和标签：开始标签和结束标签在一起如</br>
+3.在开始标签中可以定义属性，属性是由键值对构成，值需要用引号引起来(单双引均可)
+4.标签可以嵌套：需要正确嵌套不能够你中有我我中有你。错误：<a><b></a></b> 正确：<a><b></b></a>
+5.html的标签不区分大小写，但是建议使用小写
+
+标签学习：
+1.文件标签：构成html最基础的标签
+	html:是html文档的根标签，最顶层的标签
+	head:头标签，用于指定html文档的属性，还可以引入外部的文件
+	title:标题标签
+	body:体标签
+	<!DOCTYPE html>：html5中标识该文档是html文档
+2.文本标签：和文本相关的标签
+    注释：<!--注释-->
+    <h1> to <h6> 定义 HTML 标题 标题标签 h1~h6字体大小逐渐递减
+    <p> 定义一个段落
+    <br> 定义简单的折行。
+    <hr> 定义水平线。属性color,width,size,align center,left,right
+    <b> 定义粗体文本。字体加粗
+    <i> 定义斜体文本。
+    <font>属性 color size face
+    <center>文本居中
+        属性定义 color:1.使用英文单词 red,green,blue 2.rgb(值1,值2,值3)
+        值的范围 0~255 3.#值1,值2,值3推介使用 00~FF 如FF00FF 红绿蓝
+    width :1.数值 width = '20';数值的单位默认是px,px是像素 2.数值% 表示占比 相对于父元素的占比
+3.图片标签：<img> src属性用来指定图片的位置
+4.列表标签：有序列表 ol(order list) li 无序列表 ul li
+disc圆盘
+square方框
+circle圈
+5.链接标签 <a>来定义一个超链接 属性 href指定访问资源的URL target指定资源的打开方式 _self默认方式在当前页面打开 _black在新的页面打开
+span：行内标签
+div:div有一个换行的效果 默认一个div占满一整行块级标签
+6.语义化标签:<header></header>页眉 <footer></footer>页脚只是表示头和尾没有任何显示，结合CSS使用
+Html5中为了提高程序的可读性，没有任何样式
+6、表格标签:
+    <table>定义表格 width,border,cellpadding 定义内容和单元格之间的距离,
+    cellspacing定于单元格直接的距离，如果指定为0则单元格的线会合为一条 bgcolor表格的背景色
+    <tr> 定义行 属性：bgcolor表格的背景色 align
+    <td> 定义单元格 属性 ： colspan合并列 rowspan合并行
+    <th> 定义表头单元格
+    <caption>:定义表格标题
+    以下标签加上之后没有任何的变化，CSS便于控制样式
+    <thead>:表示表格的头部份
+    <tbody>:表示表格的体部份
+    <tfoot>:表示表格的脚部份
+HTML表单标签：
+表单：用于采集用户输入的数据，用于和服务器进行交互
+使用标签：form
+属性：action指定提交数据的URL method:指定提交的方式
+    get	默认。将表单数据（form-data）以名称/值对的形式附加到 URL 中：URL?name=value&name=value。
+    post：以 HTTP post 事务的形式发送表单数据（form-data）。
+    表单中的数据(表单项)要想被提交，必须指定其name属性
+    get:1.表单的参数会在地址栏中显示，会封装在请求行中 2.请求参数URL的长度有限 3.不安全
+    post:1.表单的参数不会在地址栏中显示，会封装在请求体中 2.请求参数URL的长度无限 3.较为安全
+表单项标签：<input>可以通过type取值改变输入框的样式 placeholder页面框的显示提示信息
+            type属性 text文本输入框 password密码输入框
+                    radio单选输入框/checkbox复选框 注意：1.要想让多个单选输入框实现单选，则他们的name属性必须一致 2.一般会给每一个单选框提供一个value属性来确保可以提交上值
+                    3，checked属性可以表示默认选择
+            <label>来指定输入项的文字描述信息，注意label的for属性会和input的id属性值对应，如果对应了
+            则点击label时会让输入框获得焦点
+          文件选择框file
+          hidden隐藏域用于提交一些默认信息
+按钮：1.submit用于提交表单 2.button 3.image提交表单
+
+          <select>下拉列表
+          子元素 option
+          <textArea>文本域
+          cols="10"指定列数就是一行可以输入几个字符 rows="5" 指定行数
+

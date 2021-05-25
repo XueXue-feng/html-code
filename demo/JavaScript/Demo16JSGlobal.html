@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Global全局对象</title>
+</head>
+<body>
+<script>
+
+    /*Global 对象  是一个全局对象 ，对象中封装的方法不需要对象就可以调用，方法名();
+    *
+    * 概念：URL编码：
+    * 方法 parseInt() 解析一个字符串并返回一个整数。
+    *eval()	计算 JavaScript 字符串，并把它作为脚本代码来执行。
+    * */
+    /*encodeURI()	把字符串编码为 URI。*/
+    document.write("<br>");
+    var str1 = "传智播客";
+    var encodeStr1 = encodeURI(str1);
+    document.write(encodeStr1);//%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+
+    /*decodeURI()	解码某个编码的 URI。*/
+    document.write("<br>");
+    var str2 = decodeURI(encodeStr1);
+    document.write(str2);
+
+    /*encodeURIComponent()	把字符串编码为 URI 组件。可以编码的字符更多*/
+    document.write("<br>");
+    var str3 = "传智播客";
+    var encodeStr3 = encodeURIComponent(str3);
+    document.write(encodeStr3);//%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+
+    /*decodeURIComponent()	解码一个编码的 URI 组件。*/
+    document.write("<br>");
+    var str4 = decodeURIComponent(str1);
+    document.write(str4);
+
+    document.write("<hr>");
+    /*区别*/
+    var str5 = "http://www.baidu.com?wd = 传智播客";
+    /*使用encodeURI编码方式*/
+    var encodeStr5 = encodeURI(str5);//http://www.baidu.com?wd%20=%20%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2只对汉字进行编码
+    /*解码*/
+    var str6 = decodeURI(encodeStr5);
+    document.write(encodeStr5);
+    document.write("<br>");
+    document.write(str6);
+    document.write("<br>");
+    /*使用encodeURIComponent编码方式*/
+    var encodeStr6 = encodeURIComponent(str5);//http%3A%2F%2Fwww.baidu.com%3Fwd%20%3D%20%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+    document.write(encodeStr6);
+    document.write("<br>");
+    /*解码*/
+    var str7 = decodeURIComponent(encodeStr6);
+    document.write(str7);
+    document.write("<br>");
+    document.write("<hr>");
+
+    /*parseInt() 解析一个字符串并返回一个整数。 逐一判断每一个字符是否是数字直到不是数字为止，将前面数字部分转为number
+    * */
+    var str8 = "123";
+    var number = parseInt(str8);
+    document.write(number + 1);//123
+    document.write("<br>");
+
+    var str9 = "abc123";
+    var number2 = parseInt(str9);
+    document.write(number2);//NAN NaN与任何数字相加都是NaN
+
+    document.write("<br>");//利用正号则会转换为NAN
+    var str10 = "123abs";
+    document.write(parseInt(str10));
+
+    /*isNaN()	检查某个值是否是数字 NaN六亲不认 连他自己都不等于自己。*/
+    document.write("<br>");
+    var str11 = "asc";
+    document.write(isNaN(str11));//true 是数字的化返回false不是数字的话返回true
+    document.write(isNaN(NaN));//true
+
+    document.write("<hr>");
+    /*eval() 将JavaScript 字符串，并把它作为脚本代码来执行。*/
+    var jsCode = "alert('abc')";
+    alert(jsCode);
+    eval(jsCode);//解析为js代码
+</script>
+</body>
+</html>

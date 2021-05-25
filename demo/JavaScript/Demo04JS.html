@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的运算符</title>
+    <script>
+        /*一元运算符*/
+        var a = 0;
+        var b = a ++ ;//因为++在变量后面所以是先把a的值赋值给b，然后a自增
+        /*alert(a);
+        alert(b);*/
+        /*正负号 + -代表数字的正负 注意：在js中如果运算数不是运算符所要求的类型那么JS的引擎会自动进行类型转换
+        * 其他类型转number
+        * string-->number：按照字面值转换如果字面值不能转为数字（不是数字）还是要转换为number类型NAN一个不是数字的数字
+        * boolean转number:true转为1 false转为0
+        * */
+        var str1 = +"123";
+        //alert(str1 + 1);//会进行自动类型转换
+        var str2 = +"abc";
+        /*alert(typeof (str2));
+        alert(str2);*/
+        var flag = + true;
+        document.write(typeof (flag) + "<br>");
+        document.write(flag);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

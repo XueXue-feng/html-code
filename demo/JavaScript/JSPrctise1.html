@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输出一个99乘法表</title>
+</head>
+<body>
+<script>
+
+
+</script>
+</body>
+<table border="1">
+    <tr>
+        <th>9*9乘法表</th>
+    </tr>
+    <script>
+        /*while循环实现*/
+        /*var a = 1;
+        var b = 1;
+        while(a <= 9){
+            document.write("<tr>");
+            while(b <= a){
+                document.write("<td>");
+                document.write(a + "*" + b + "="  + (a*b) );
+                b ++;
+                document.write("</td>");
+            }
+            document.write("</tr>");
+            a ++;
+            b = 1;
+        }*/
+        /*使用for循环实现*/
+        for (var i = 1; i <= 9; i++) {
+            document.write("<tr>");
+            for (var j = 1; j <= i; j++) {
+                document.write("<td>");
+                document.write(i + "*" + j + "="  + (i*j) );
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+
+    </script>
+
+</table>
+</html>

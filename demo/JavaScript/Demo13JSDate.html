@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的日期对象</title>
+</head>
+<body>
+<script>
+    /*
+    * Date对象 1.创建 var date = new Date();
+    * 2.方法：1.toLocaleString()	根据本地时间格式，把 Date 对象转换为字符串。
+    * */
+
+    /*创建*/
+    var date = new Date();
+    document.write(date);
+    document.write("<br>");
+    /*toLocaleString()	根据本地时间格式，把 Date 对象转换为字符串。*/
+    document.write(date.toLocaleString());//2021/5/24下午9:23:56
+
+    document.write("<br>");
+    /*UTC()	根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。*/
+    document.write(date.getUTCDate());
+
+    document.write("<br>");
+    /*getTime() 返回 1970 年 1 月 1 日至今的毫秒数。*/
+    document.write(date.getTime());//1621862838267
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+</head>
+<body>
+<script>
+    /* &&短路效果 ||短路效果 ！
+    * 短路：如果左边可以判断则不去继续判断
+    *
+    * 其他类型转boolean
+    * number --> boolean:0或NAN为false 非0为true;
+    * string --> boolean:除了空字符串不是null为false剩下都为true
+    * null和undefined--->都是false
+    * 对象 ---> boolean 所以对象都为true;
+    * */
+    var flag = true;
+    document.write(flag + "<br>");
+    document.write(!flag + "<br>")
+    document.write("<hr>");
+    var num1 = 3;
+    var num2 = 0;
+    var num3 = NaN;
+    document.write(!!num1);//false
+    document.write(!!num2);//true
+    document.write(!!num3);//true
+    document.write("<hr>");
+    /*应用场景
+    * while(1){
+    * }写死循环的时候可以写数字，一般写1
+    * */
+    var str1 = "abc";
+    var str2 = "";
+    var str3 = null;
+    document.write(!!str1);//true
+    document.write(!!str2);//false
+    document.write(!!str3);//false
+    document.write("<hr>");
+    var str4 = undefined;
+    document.write(!!str4);
+    document.write("<hr>");
+    /*对象*/
+    var date = new Date();
+    document.write(!!date);
+    /*用途：为了防止空指针异常
+    *
+    * if(date){//可以进行自动类型转换为boolean
+    * 如果是string类型可以判断其是否为null和其长度是否为0
+    * }
+    * */
+</script>
+</body>
+</html>

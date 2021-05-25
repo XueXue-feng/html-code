@@ -1,0 +1,57 @@
+JavaScript基础
+基本概念：是一门客户端脚本语言，运行在客户端浏览器中的，每一个浏览器都有JavaScript的解析引擎
+不需要进行编译操作，直接就可以被浏览器解析执行
+功能：1.可以增强用户和HTML的交互，可以来控制HTML元素，可以让页面有一个动态效果
+JavaScript的发展：
+1.1992年NomBase公司开发出第一门客户端脚本语言C--专门用于表单的校验，后更名为ScriptEase
+2.1995年NetScape网景公司专门开发浏览器，开发了一门客户端脚本语言LiveScript，和Sun公司修改LiveScript命名为JavaScript
+3.1996年微软公司推出了IE浏览器抄袭了JavaScript开发了JScript语言,
+4.1997年,ECMA欧洲计算机制造商协会，ECMAScript所以客户端脚本语言的标准
+JavaScript = ECMAScript + 自己特有的东西(BOM+DOM)
+ECMAScript：客户端脚本语言的标准包含基本的语法+自定义对象
+基本语法：1.与HTML的结合 2.注释写法 3.数据类型 4.变量  5.运算符  6.流程控制语句
+1.与HTML的结合：内部JS:定义script标签，标签体就是JavaScript代码 外部JS：通过src属性引入外部js文件
+注意：1.script可以定义在HTML的任意位置，但是定义的位置会影响执行的顺序
+2.script标签可以定义多个
+注释：1.单行注释 // 2.多行注释 /***/
+数据类型 ：1.原始数据类型(基本数据类型):五种
+1.number:数字 整数，小数，NAN特殊的数字 not a number
+2.String:字符串类型 字符和字符串，单双引都可以
+3.boolean:true 和false
+4.null:一个对象为Null的占位符
+5.undefined:从null演变，未定义，如果一个变量没有被初始化则会被初始化为undefined类型
+ 2.引入数据类型(对象)：DOM,BOM....
+ 变量的定义：变量的概念：一小块存储数据的空间
+ Java语言是强类型的语言而JavaScript是弱类型语言 强类型：在开辟变量存储空间的时候定义了空间将来存放的数据类型。只能存储固定的数据类型
+ 弱类型语言：在开辟变量存储空间时，不定义变量的数据类型，可以存储任意数据类型
+ 语法：var 变量名 = 初始化值;
+ 运算符：一元运算符 ++ -- +正号 对于 ++ --是自增自减在前在后的问题 ++在前面先自增再运算 在后面 先运算再自增
+ 2.算数运算符 + - * 、 %
+ 3.赋值运算符 = += -=
+ 4.比较运算符 > < >= <= == ===全等于
+ 5.逻辑运算符 && || ！
+ 6。三元运算符 ?:表达式 表达式 ? 值1 : 值2 ;a > b ? a :b
+ 流程控制语句：1.if else
+ 2.switch在JAVA中switch
+ switch(变量){ byte,int,short,char,枚举,字符串
+ case 1:
+ }
+ 在JS中switch什么类型都可以接收原始数据类型
+ 3.do....while
+ 4.while
+ 5.for(){}
+ JS特殊语法：
+ 基本对象：
+ Function:描述一个方法或者是函数
+ Array:数组对象
+ Boolean:
+ Date:
+ Math:数学对象
+Number:
+String:
+RegExg:正则表达式
+Global:特点：是一个全局对象 ，对象中封装的方法不需要对象就可以调用，方法名();
+
+
+BOM:
+DOM:

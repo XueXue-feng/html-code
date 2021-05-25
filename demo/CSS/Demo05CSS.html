@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展选择器</title>
+    <style>
+        div p{
+            color: blue;
+        }
+        div > p{
+            border: 1px solid;
+        }
+        input[type = "text"]{
+            border: 2px solid;
+        }
+        a:link{
+            color: chartreuse;
+        }
+        a:hover{
+            color: blue;
+        }
+        a:active{
+            color: black;
+        }
+        a:visited{
+            color: darkcyan;
+        }
+
+    </style>
+</head>
+<body>
+        <!--子选择器 选择器1 选择器2 {}筛选选择器1下的选择器2元素-->
+<div>
+    <p>传智博客</p>
+</div>
+    <p>黑马程序员</p>
+<div>aaa</div><!--因为这个div标签内部没有P标签所以不会别选中-->
+<input type="text"><input type="password">
+<br>
+<a href="#">黑马程序员</a>
+</body>
+</html>

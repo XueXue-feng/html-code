@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演示表格标签</title>
+</head>
+<body>
+    <!--table标签-->
+    <!--cellpadding单元格内容与其边框之间的空白。-->
+    <!--使用 cellspacing 增加单元格之间的距离-->
+    <!--align = "center" 表格会跑到中间-->
+    <table border="1" width="50%" cellpadding="0" cellspacing = "0" bgcolor="#7fffd4" align="center">
+        <thead>
+        <caption>学生表</caption>
+            <tr align="center" bgcolor="aqua">
+                <th>编号</th>
+                <th>姓名</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>96</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>67</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+
+
+    <table border="1" align="center" cellpadding="0" cellspacing="0" width="50%">
+        <thead align="center">
+            <caption>我是练习合并单元格</caption>
+            <tr>
+                <th>班级</th>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td rowspan="2">823</td>
+                <td>小红</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>小名</td>
+                <td>15</td>
+            </tr>
+        </tbody>\
+        <tfoot align="center">
+        <tr>
+            <td>824</td>
+            <td colspan="2">小李</td>
+        </tr>
+
+
+        </tfoot>
+
+
+
+    </table>
+</body>
+</html>
