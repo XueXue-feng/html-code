@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象定时器相关</title>
+</head>
+<body>
+<script>
+    /*1.setTimeout() 在指定的毫秒数后调用函数或计算表达式。
+    * 2.clearTimeout()	取消由 setTimeout() 方法设置的 timeout。
+    * 3.setInterval()	按照指定的周期（以毫秒计）来调用函数或计算表达式。
+    * 4.clearInterval()	取消由 setInterval() 设置的 timeout。*/
+    /*一次性定时器setTimeout() 参数：1.JS代码获取方法对象 2.毫秒值
+    * 返回值：返回一个唯一标识用于取消定时器*/
+    //setTimeout(fun,3000);/*只会执行一次*/
+    function fun() {
+        document.write("我不行了");
+    }
+    /*循环定时器*/
+    var id = setInterval(fun,3000);
+    /*取消定时器*/
+    /*clearInterval(id);*/
+</script>
+</body>
+</html>

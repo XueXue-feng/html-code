@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象获取其他对象</title>
+</head>
+<body>
+<script>
+    /*window对象的属性：1.获取其他浏览器对象
+    1.history	对 History 对象的只读引用。请参数 History 对象。
+    2.location	用于窗口或框架的 Location 对象。请参阅 Location 对象。
+    3.Screen	对 Screen 对象的只读引用。请参数 Screen 对象。
+    4.Navigator	对 Navigator 对象的只读引用。请参数 Navigator 对象。*/
+    var history1 = window.history;
+    var history2 = history;
+    /*document	对 Document 对象的只读引用。请参阅 Document 对象。*/
+    window.document.write("我是胖胖");
+
+</script>
+</body>
+</html>

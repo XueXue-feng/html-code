@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM获取元素对象</title>
+</head>
+<body>
+<img src="./img/off.gif" id = "light">
+<h1 id ="title">毁创阿里Jack Ma</h1>
+<script>
+    /*通过id来获取元素对象*/
+    var light = document.getElementById("light");//[object HTMLImageElement]
+    /*获取对象之后要操作对象 修改其属性：1.明确获取的对象是哪一个 2.查看API文档查看属性  修改标签体内容*/
+    //alert("我要换图片了");
+    //light.src("./img/on.gif");
+    /*修改标签体内容 属性 ：innerHTML()*/
+    var title = document.getElementById('title');
+    //修改内容
+    alert("我要换内容了");
+    title.innerHTML = "我是胖墩";
+</script>
+</body>
+</html>

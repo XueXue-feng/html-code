@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>n秒之后自动跳转首页</title>
+    <style>
+        div {
+            /*background: black;*/
+            margin-top: 100px;
+            margin-left: 550px;
+            width: 300px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <font>页面<span id="secondSpan">1</span>秒后跳转...<span>
+        <a id = "urlSpan">点我直接跳转</a></span></font>
+</div>
+
+<script>
+    var secondSpan = document.getElementById("secondSpan");
+    /*显示一个计时效果*/
+    var id = window.setInterval(fun, 1000);
+    /*定义一个数组*/
+    var array = [1,2,3,4,5];
+    var i = 1;
+
+    function fun() {
+        if (i == (array.length - 1)) {
+            clearTimeout(id);
+           window.location.href = "http://www.baidu.com";
+        }
+        secondSpan.innerHTML = "&nbsp;" + array[i] + "&nbsp;";
+        i = i + 1;
+    };
+
+    /*设置直接跳转*/
+    var urlSpan = document.getElementById("urlSpan");
+    urlSpan.href = "http://www.baidu.com";
+
+
+</script>
+</body>
+</html>

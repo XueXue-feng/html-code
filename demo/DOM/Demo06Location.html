@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+</head>
+<body>
+<input type="button" value="刷新该页面" id="reloadBtn">
+<input type="button" value="点击一下去百度" id="goBaidu">
+<script>
+    /*Location对象
+    * 1.创建：(获取)通过window直接获取 window.location;或者 location;
+    * 2.方法：reload() 重新加载当前文档。
+    * 3、属性：href 设置或返回完整的 URL。
+    * */
+    var location1 = window.location;
+    /*方法*/
+    var reloadBtn = document.getElementById("reloadBtn");
+    reloadBtn.onclick = function () {
+        location1.reload();
+    }
+
+    /*属性获取href*/
+    var href = location1.href;
+    //alert(href);
+    /*获取按钮*/
+    var goBaidu = document.getElementById("goBaidu");
+    goBaidu.onclick = function () {
+        location1.href = "http://www.baidu.com";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+DOM简单学习：功能控制HTML文档内容，属性 代码 ：获取页面的标签(元素对象)：Element
+document.getElementById(id值);通过元素的id获取元素对象
+每个载入浏览器的 HTML 文档都会成为 Document 对象。
+事件简单学习：onclick
+BOM:Browser Object Model浏览器对象模型
+将浏览器的各个组成部分封装成对象 ：Navigator浏览器对象 window窗口对象 地址栏location对象 history历史记录对象 显示屏屏幕Screen对象
+DOM document对象
+window对象包含：DOM document对象 地址栏location对象 history历史记录对象
+window对象的属性：1.获取其他浏览器对象
+1.history	对 History 对象的只读引用。请参数 History 对象。
+2.location	用于窗口或框架的 Location 对象。请参阅 Location 对象。
+3.Screen	对 Screen 对象的只读引用。请参数 Screen 对象。
+4.Navigator	对 Navigator 对象的只读引用。请参数 Navigator 对象。

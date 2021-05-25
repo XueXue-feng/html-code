@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        div{
+            width: 100%;
+            height: 300px;
+            background-image: url("img/banner_1.jpg");
+        }
+        .img{
+            width: 100px;
+            height: 200px;
+        }
+        #before{
+            float: left;
+        }
+        #after{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<img id="changeImg" src="img/banner_1.jpg">
+<div id = "myDiv">
+    <img src="img/on.gif" id = "before" class="img">
+    <img src="img/off.gif" id = "after" class="img">
+</div>
+<script>
+    /*打开循环定时器*/
+    window.setInterval(fun, 3000);
+    /*获取需要轮播的图片*/
+    var changeImg = document.getElementById("changeImg");
+    /*把需要轮播的图片放在数组中*/
+    var array = new Array();
+    array.push("banner_1.jpg");
+    array.push("banner_2.jpg");
+    array.push("banner_3.jpg");
+
+    /*获取背景图*/
+    var myDiv = document.getElementById("myDiv")
+    var i = 1;/*设置轮播图*/
+    var currenNum = 3;/*记录当前的array[i]*/
+    function fun() {
+        /*更换图片*/
+        changeImg.src = "./img/" + array[i];
+        /*更换div的背景图*/
+        myDiv.style.backgroundImage = "url(./img/" + array[i] + ")";
+        i ++;
+        if(i === array.length){
+            i = 0;
+        }
+        currenNum = i;
+    };
+    
+    /*给左边的灯泡设置点击事件*/
+    var before = document.getElementById("before");
+    before.onclick = function () {
+        currenNum --;
+        if(currenNum <= 0){
+            currenNum = 0;
+        }
+        myDiv.style.backgroundImage = "url(./img/" + array[currenNum] + ")";
+    }
+    var after = document.getElementById("after");
+    after.onclick = function () {
+        currenNum ++;
+        if(currenNum >= (array.length - 1)){
+            currenNum = array.length - 1;
+        }
+        myDiv.style.backgroundImage = "url(./img/" + array[currenNum] + ")";
+    }
+
+
+</script>
+</body>
+</html>

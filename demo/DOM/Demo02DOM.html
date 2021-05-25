@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM事件</title>
+</head>
+<body>
+<img src="./img/off.gif" id = "light" onclick="fun();">
+<img src="./img/off.gif" id = "light2"">
+<script>
+    /*事件
+    * 1.概念：某些组件在被执行了某些操作之后触发了某些代码的执行
+    * 2.绑定事件：1.直接在HTML的标签上指定事件的属性(操作)，属性值就是js代码 onclick()单击事件 耦合度比较高
+    * 2.可以通过JS获取元素对象，指定对象属性 ，设置函数
+    * */
+function fun(){
+    alert("我被点了");
+}
+function fun2(){
+    alert("怎么总是点我");
+}
+/*方式2 耦合度低*/
+    var light2 = document.getElementById("light2");
+    light2.onclick = fun2;
+
+</script>
+</body>
+</html>

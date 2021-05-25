@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+</head>
+<body>
+<input type="button" value="打开新的窗口" id = "openBtn">
+<input type="button" value="关闭窗口" id = "closeBtn">
+<script>
+    /*窗口对象
+    * 1.创建：
+    * 方法：
+    * 1.与弹出框有关的方法 alert() 显示带有一段消息和一个确认按钮的警告框。
+    * confirm() :显示带有一段消息以及确认按钮和取消按钮的对话框。如果用户点击确认法昂发返回true
+    * prompt(); 显示可提示用户输入的对话框。返回值是获取用户输入的值
+    * 属性：
+    * 特点：1.window对象不需要创建可以直接使用window直接使用 window.方法名 2.window引用可以省略 可以直接使用方法名直接调用
+    *2.与打开关闭有关的方法 open()	打开一个新的浏览器窗口或查找一个已命名的窗口。会返回新的window对象
+    * close()	关闭浏览器窗口。 谁调用我，我关谁
+    *3.与定时器有关的方法： 1.setTimeout() 在指定的毫秒数后调用函数或计算表达式。
+    * 2.clearTimeout()	取消由 setTimeout() 方法设置的 timeout。
+    * 3.setInterval()	按照指定的周期（以毫秒计）来调用函数或计算表达式。
+    * 4.clearInterval()	取消由 setInterval() 设置的 timeout。
+    * */
+    /*方法1 alert()*/
+    /*alert("Hello Window");
+    window.alert("Hello JavaScript");*/
+
+    /*var flag = window.confirm("您确认要推出吗");*/
+    function fun1(){
+        document.write("我确认推出了");
+    };
+    function fun2(){
+        document.write("我取消推出了");
+    };
+    /*if(flag){
+        fun1();
+    }else{
+        fun2();
+    }*/
+
+    /*prompt(); 显示可提示用户输入的对话框。*/
+    var result = prompt("请输入用户名");
+    alert(result);
+
+    /*点击按钮打开一个新窗口*/
+    var newWindow;
+    var openBtn = document.getElementById("openBtn");
+    openBtn.onclick = function () {
+        /*可以往里传穿参数*/
+        newWindow = open("https://www.baidu.com");
+    }
+    /*关闭窗口*/
+    var closeBtn = document.getElementById("closeBtn");
+    closeBtn.onclick = function () {
+        /*关闭窗口*/
+        newWindow.close();
+    }
+</script>
+</body>
+</html>
